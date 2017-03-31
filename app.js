@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+const jsonData = require('./routes/jsonData');
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(path.resolve('../bookGetter/frontTest/img/page/
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/jsonData', jsonData);
 
 app.get('/', function (req, res) {
     res.send('hello world');
