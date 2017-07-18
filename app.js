@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(path.resolve('../bookGetter/frontTest'))));
 app.use(express.static(path.join(path.resolve('../bookGetter/frontTest/img/page/target'))));
 
 app.use('/', index);
